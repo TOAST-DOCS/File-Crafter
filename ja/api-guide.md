@@ -76,7 +76,7 @@ https://api-file-crafter.nhncloudservice.com
     | 값                               | 타입      | 제약 사항          | 필수  | 설명                                        |
     |---------------------------------|----------------|----------------|-------------------------------------------|-------------------------------------------|
     | callback                        | Object  | Not Null       | O   | export를 위한 콜백 정보                          | 
-    | callback.url                    | String  | Not Blank      | O   | export를 위해 File Crafter가 호출해야할 URL        |
+    | callback.url                    | String  | Not Blank      | O   | export를 위해 File Crafter가 호출해야 할 URL        |
     | callback.query                  | Object  |                |     | File Crafter가 지정된 URL을 호출하면서 함께 전달할 query |
     | exportedFile                    | Object  | Not Null       | O   | export 결과 파일 정보                           |
     | exportedFile.extension          | String  | Not Null       | O   | [xls, xlsx, csv, json]                    |
