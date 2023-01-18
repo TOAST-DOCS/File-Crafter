@@ -1,12 +1,12 @@
-## Application Service > File Crafter > 콜백 API 가이드
+## Application Service > File Crafter > コールバックAPIガイド
 
-File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜백 API 제공이 필요합니다.
-각 콜백 API의 요구사항을 안내합니다.
+File Crafterのimport/export機能を利用するには適切なコールバックAPIの提供が必要です。
+各コールバックAPIの要件を案内します。
 
-### Export 콜백
+### Exportコールバック
 
-페이징 처리된 목록 조회를 위한 콜백 API 입니다. 페이징을 위해 두가지 타입의 파라미터 셋을 이용할 수 있습니다.
-더 이상 조회 결과가 없을때까지 반복해서 호출하여 데이터를 export 합니다.
+ページング処理されたリスト照会のためのコールバックAPIです。ページングのために2つのタイプのパラメータセットを利用できます。
+照会結果がなくなるまで繰り返し呼び出してデータをexportします。
 
 - [HTTP Method]
 
@@ -21,13 +21,13 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
 
 - [Query parameter]
 
-  | 항목                 | 키                 | 비고                              |
+  | 項目               | キー                | 備考                            |
   |--------------------|-------------------|---------------------------------|
-  | 한번에 조회 할 데이터 갯수    | limit or pageSize | offset or pageNum 과 세트 사용 필수    |             
-  | 페이징을 위해 건너뛸 데이터 갯수 | offset or pageNum |                                 |
-  | 시트 구분 파라미터         | sheetQuery        | 다중 시트 export인 경우 시트 구분을 위한 파라미터 |                              |
+  | 一度に照会するデータ数  | limit or pageSize | offset or pageNumとセット使用必須  |             
+  | ページングのためにスキップするデータ数 | offset or pageNum |                                 |
+  | シート区分パラメータ       | sheetQuery        | 複数シートexportの場合、シート区分のためのパラメータ |                              |
 
-- offset, limit 파라미터 셋
+- offset、limitパラメータセット
     ```json
     {
       "offset": 0,
@@ -35,7 +35,7 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
     }
     ```
 
-- pageNum, pageSize 파라미터 셋
+- pageNum、pageSizeパラメータセット
 
     ```json
     {
@@ -60,9 +60,9 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
   }
   ```
 
-### Import 콜백
+### Importコールバック
 
-다수 항목으로 구성된 객체 배열을 요청으로 받아 처리할 수 있는 콜백 API 입니다.
+複数の項目で構成されたオブジェクト配列をリクエストとして受け取り処理できるコールバックAPIです。
 
 - [HTTP Method]
 
@@ -101,9 +101,9 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
   }
   ```
 
-### Validate 콜백
+### Validateコールバック
 
-Import 콜백 요청 전 적절한 데이터인지 검증할 수 있는 콜백 API 입니다. 받은 요청 데이터를 검증 성공/실패로 구분하여 반환해야 합니다.
+Importコールバックリクエスト前に適切なデータであることを検証できるコールバックAPIです。受け取ったリクエストデータを検証成功/失敗で区分して返す必要があります。
 
 - [HTTP Method]
 
