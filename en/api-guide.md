@@ -1,8 +1,8 @@
-## Application Service > File Crafter > API 사용 가이드
+## Application Service > File Crafter > API Guide
 
-### API 소개
+### API Overview
 
-#### API 도메인
+#### API Domain
 
 ```
 https://api-file-crafter.nhncloudservice.com
@@ -10,31 +10,31 @@ https://api-file-crafter.nhncloudservice.com
 
 #### AppKey & Secret
 
-- 헤더에 AppKey와 Secret 키를 추가해야 합니다.
-- **CONSOLE > Application Service > File Crafter > URL & AppKey**에서 확인하거나 생성할 수 있습니다.
+- You must add AppKey and Secret Key to headers.
+- You can check or create them in **CONSOLE > Application Service > File Crafter > URL & AppKey**.
 
-### Export 요청
-지정된 URL로 반복 요청을 보낸 뒤 받은 응답을 파일로 저장하여 지정된 스토리지로 업로드합니다. Export 콜백 URL에서 요구되는 스펙은 [콜백 API 가이드](./callback-api-guide.md)에서 확인하실 수 있습니다.
+### Export Request
+After sending repetitive requests to the specified URL, the received response is saved as a file and uploaded to the specified storage. The specifications required by the Export callback URL can be found in the [Callback API Guide](./callback-api-guide.md).
 
-#### 요청
+#### Request
 
 - [URL]
     ```
     POST /file-crafter/v2.0/export/files 
-    Content-Type: appliction/json
-    ```
+Content-Type: appliction/json
+        ```
 
 - [Header]
     ```json
-    {
-      "x-tc-app-key": "String",
-      "x-secret-key": "String"
-    }
-    ```
+  {
+  "x-tc-app-key": "String",
+  "x-secret-key": "String"
+  }
+        ```
 
 - [Request body]
 
-    ```json
+      ```json
     {
       "callback": {
         "url": "http://my.service.com/api/export",
@@ -52,7 +52,7 @@ https://api-file-crafter.nhncloudservice.com
         },
         "sheets": [
           {
-            "sheetName": "시트1",
+            "sheetName": "Sheet 1",
             "sheetQuery": "sheetQuery1"
           }
         ]
@@ -73,18 +73,18 @@ https://api-file-crafter.nhncloudservice.com
     }
     ```
 
-    | 값                               | 타입      | 제약 사항          | 필수  | 설명                                        |
+    | Value                               | Type      | Constraints          | Required  | Description                                        |
     |---------------------------------|----------------|----------------|-------------------------------------------|-------------------------------------------|
-    | callback                        | Object  | Not Null       | O   | export를 위한 콜백 정보                          | 
-    | callback.url                    | String  | Not Blank      | O   | export를 위해 File Crafter가 호출해야 할 URL        |
-    | callback.query                  | Object  |                |     | File Crafter가 지정된 URL을 호출하면서 함께 전달할 query |
-    | exportedFile                    | Object  | Not Null       | O   | export 결과 파일 정보                           |
+    | callback                        | Object  | Not Null       | O   | Callback information for export                          | 
+    | callback.url                    | String  | Not Blank      | O   | URL to call by File Crafter for export        |
+    | callback.query                  | Object  |                |     | Query sent along when File Crafter calls the specified URL. |
+    | exportedFile                    | Object  | Not Null       | O   | Information on export result file                           |
     | exportedFile.extension          | String  | Not Null       | O   | [xls, xlsx, csv, json]                    |
-    | exportedFile.maxRowCountPerFile | Integer | 1000 ~ 1000000 |     | 파일별 최대 행 제한                               |
-    | exportedFile.password           | String  |                |     | 결과 파일의 암호(xls, xlsx 포맷 지원)                |
-    | exportedFile.fields             | Object  |                |     | export 대상 필드 키, 항목명                       |
-    | exportedFile.sheets             | Array   |                |     | 다수 시트로 export 하는 경우 시트 구분 쿼리 키, 시트명       |
-    | storages                        | Array   | Not Empty      |     | 결과 파일을 업로드할 storage 정보. 최대 5개 지정 가능.      |
+    | exportedFile.maxRowCountPerFile | Integer | 1000 ~ 1000000 |     | Maximum row count per file                               |
+    | exportedFile.password           | String  |                |     | Password for result file (xls, xlsx formats supported)                |
+    | exportedFile.fields             | Object  |                |     | Export target field, Item name                       |
+    | exportedFile.sheets             | Array   |                |     | Query key to distinguish sheets when multiple sheets are exported, Sheet name       |
+    | storages                        | Array   | Not Empty      |     | Information on storage where result file is uploaded. Up to 5 can be specified.      |
     | storages.accessKey              | String  |                |     |                                           |
     | storages.secretKey              | String  |                |     |                                           |
     | storages.bucketName             | String  |                |     |                                           |
@@ -92,10 +92,10 @@ https://api-file-crafter.nhncloudservice.com
     | storages.region                 | String  |                |     |                                           |
     | storages.filePath               | String  |                |     |                                           |
     | storages.fileName               | String  |                |     |                                           |
-    | searchKey                       | String  |                |     | 콘솔에서 요청을 조회하는 데 사용할 검색 키                  |
+    | searchKey                       | String  |                |     | Search key used to retrieve requests in the console                  |
 
-  - exportedFile.fields
-      - export callback 응답에서 키를 추출하여 값으로 export 합니다.
+   - exportedFile.fields
+      -  Key is extracted from the export callback response and exported as a value.
           - ex)
               - exportedFile.fields
                 ```json
@@ -113,13 +113,13 @@ https://api-file-crafter.nhncloudservice.com
                 ```
               - export result
 
-                  | 이름 | 연락처 |
+                  | Name | Contact |
                   |---|---|
                   | Jason |01012341234|
                   | Tim   |01043214321|
 
 - exportedFile.sheets
-    - export callback 요청 시 sheetQuery 파라미터를 전달하고, 응답을 sheetName 시트에 export 합니다.
+    - When requesting export callback, sheetQuery parameter is sent, and the response is exported to the sheetName sheet.
         - ex)
             - exportedFile.fields
               ```json
@@ -135,10 +135,10 @@ https://api-file-crafter.nhncloudservice.com
               http://my.service.com/api/export?sheetQuery=October
               ```
 
-### Import 요청
-업로드된 파일을 파라미터화 하여 지정된 URL로 반복 요청 합니다. import 콜백 URL에서 요구되는 스펙은 [콜백 API 가이드](./callback-api-guide.md)에서 확인하실 수 있습니다.
+### Import Request
+Parameterize the uploaded file and make repetitive requests to the specified URL. The specifications required by the import callback URL can be found in the [Callback API Guide](./callback-api-guide.md).
 
-#### 요청
+#### Request
 
 - [URL]
     ```
@@ -147,41 +147,41 @@ https://api-file-crafter.nhncloudservice.com
 
 - [Header]
     ```json
-    {
-      "x-tc-app-key": "String",
-      "x-secret-key": "String"
-    }
-    ```
+  {
+  "x-tc-app-key": "String",
+  "x-secret-key": "String"
+  }
+        ```
 
 - [Query parameter]
 
-    | 값                     | 타입     | 제약 사항   | 필수  | 설명                                    |
+    | Value                     | Type     | Constraints   | Required  | Description                                    |
     |-----------------------|---------|---------|---------------------------------------|---------------------------------------|
-    | importingCallbackUrl | Object |         | O   | 유효성 검사를 위해 File Crafter가 호출해야 할 URL   |
-    | validatingCallbackUrl  | String |         |     | export를 위해 File Crafter가 호출해야 할 URL |
-    | isAutoImporting       | String |         |    | 유효성 검사가 포함된 경우                        |
-    | dataStartRowNum       | String | 최소 2 이상 |     | 실제 데이터가 시작되는 행 번호                     |
-    | searchKey             | String |         |     | 콘솔에서 요청을 조회하는 데 사용할 검색 키               |
-    | password              | String |         |     | 암호화된 excel 파일을 import 하는 경우 해당 파일의 암호 |
+    | importingCallbackUrl | Object |         | O   | URL to call by File Crafter for validity check   |
+    | validatingCallbackUrl  | String |         |     | URL to call by File Crafter for export |
+    | isAutoImporting       | String |         |    | When validity check is included                        |
+    | dataStartRowNum       | String | At least 2 |     | Row number where actual data starts                     |
+    | searchKey             | String |         |     | Search key used to retrieve requests in the console               |
+    | password              | String |         |     | File password when importing an encrypted excel file |
 
-### 공통 응답
-Export 요청, Import 요청이 공통적으로 사용하는 응답입니다.
+### Common response
+Response commonly used by Export and Import requests.
 
 - [Response body]
     ```json
     {
-      "header": {
-        "resultCode": 0,
-        "resultMessage": "success",
-        "isSuccessful": true
-      },
-      "fileId": "String"
-    }
-    ```
-    | 값                    | 타입      | 설명        |
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "fileId": "String"
+}
+        ```
+    | Value                    | Type      | Description        |
     |----------------------|-----------|-------|
     | header               | Object  |           |
-    | header.resultCode    | Integer | 요청 결과 코드  |
-    | header.resultMessage | String  | 요청 결과 메세지 |
-    | header.isSuccessful  | Boolean | 요청 처리 결과   |
-    | fileId               | String  | 요청 ID     |
+    | header.resultCode    | Integer | Request result code  |
+    | header.resultMessage | String  | Request result message |
+    | header.isSuccessful  | Boolean | Request success or not   |
+    | fileId               | String  | Request ID     |

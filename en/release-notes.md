@@ -1,8 +1,7 @@
-## Application Service > File Crafter > 릴리스 노트
+## Application Service > File Crafter > Release Note
 
-### 2023. 01. 31.
+### January 31, 2023
 
-#### 신규 서비스 출시
+#### Release of a New Service
 
-- File Crafter는 File을 이용하여 특정 API URL에 반복적인 요청을 보내거나, API 응답 결과를 수집하여 File로 내려받을 수 있는 서비스입니다. 대용량 처리에 필요한 메모리 관리, 비 동기
-  흐름 관리 등 어렵고 번거로운 처리를 지원합니다.
+- File Crafter is a service that sends repetitive requests using files to specific API URLs or to receive API response results collected as a file. The service supports difficult and time consuming processing such as memory management and asynchronous flow management required for large-capacity processing.
