@@ -21,20 +21,20 @@ After sending repetitive requests to the specified URL, the received response is
 - [URL]
     ```
     POST /file-crafter/v2.0/export/files 
-Content-Type: appliction/json
-        ```
+    Content-Type: appliction/json
+    ```
 
 - [Header]
     ```json
-  {
-  "x-tc-app-key": "String",
-  "x-secret-key": "String"
-  }
-        ```
+    {
+      "x-tc-app-key": "String",
+      "x-secret-key": "String"
+    }
+    ```
 
 - [Request body]
 
-      ```json
+    ```json
     {
       "callback": {
         "url": "http://my.service.com/api/export",
@@ -147,11 +147,11 @@ Parameterize the uploaded file and make repetitive requests to the specified URL
 
 - [Header]
     ```json
-  {
-  "x-tc-app-key": "String",
-  "x-secret-key": "String"
-  }
-        ```
+    {
+      "x-tc-app-key": "String",
+      "x-secret-key": "String"
+    }
+    ```
 
 - [Query parameter]
 
@@ -170,14 +170,14 @@ Response commonly used by Export and Import requests.
 - [Response body]
     ```json
     {
-  "header": {
-    "resultCode": 0,
-    "resultMessage": "success",
-    "isSuccessful": true
-  },
-  "fileId": "String"
-}
-        ```
+      "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+      },
+      "fileId": "String"
+    }
+    ```
     | Value                    | Type      | Description        |
     |----------------------|-----------|-------|
     | header               | Object  |           |
