@@ -10,14 +10,14 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
 
 - [HTTP Method]
 
-    ```
-    GET
-    ```
+```
+GET
+```
 - [Content-Type]
 
-  ```
-  application/json
-  ```
+```
+application/json
+```
 
 - [Query parameter]
 
@@ -28,78 +28,77 @@ File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜�
   | 시트 구분 파라미터         | sheetQuery        | 다중 시트 export인 경우 시트 구분을 위한 파라미터 |                              |
 
 - offset, limit 파라미터 셋
-    ```json
-    {
-      "offset": 0,
-      "limit": 10
-    }
-    ```
+```json
+{
+  "offset": 0,
+  "limit": 10
+}
+```
 
 - pageNum, pageSize 파라미터 셋
 
-    ```json
-    {
-      "pageNum": 1,
-      "pageSize": 10
-    }
-    ```
+```json
+{
+  "pageNum": 1,
+  "pageSize": 10
+}
+```
 
 - [Response body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
 ### Import 콜백
 
 다수 항목으로 구성된 객체 배열을 요청으로 받아 처리할 수 있는 콜백 API 입니다.
 
 - [HTTP Method]
-
-    ```
-    POST
-    ```
+```
+POST
+```
 - [Content-Type]
-    ```
-    application/json
-    ```
+```
+application/json
+```
 
 - [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
-- [Response body]
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
     },
-    "errors": []  
-  }
-  ```
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
+- [Response body]
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "errors": []  
+}
+```
 
 ### Validate 콜백
 
@@ -107,50 +106,50 @@ Import 콜백 요청 전 적절한 데이터인지 검증할 수 있는 콜백 A
 
 - [HTTP Method]
 
-    ```
-    POST
-    ```
+```
+POST
+```
 - [Content-Type]
-    ```
-    application/json
-    ```
+```
+application/json
+```
 
 - [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
 - [Response body]
 
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
-    },
-    "success": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      }
-    ],
-    "errors": [
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]         
-  }
-  ```
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "success": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    }
+  ],
+  "errors": [
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]         
+}
+```

@@ -10,14 +10,14 @@ Export data by calling repeatedly until there are no more query results.
 
 - [HTTP Method]
 
-    ```
-    GET
-    ```
+```
+GET
+```
 - [Content-Type]
 
-  ```
-  application/json
-  ```
+```
+application/json
+```
 
 - [Query parameter]
 
@@ -28,37 +28,37 @@ Export data by calling repeatedly until there are no more query results.
   | Parameter for sheet classification         | sheetQuery        | Parameter to classify sheets when exporting multiple sheets |                              |
 
 - offset, limit parameter set
-    ```json
-    {
-      "offset": 0,
-      "limit": 10
-    }
-    ```
+```json
+{
+  "offset": 0,
+  "limit": 10
+}
+```
 
 - pageNum, pageSize parameter set
 
-    ```json
-    {
-      "pageNum": 1,
-      "pageSize": 10
-    }
-    ```
+```json
+{
+  "pageNum": 1,
+  "pageSize": 10
+}
+```
 
 - [Response body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
 ### Import Callback
 
@@ -66,40 +66,40 @@ Callback API that can receive and process an object array consisting of multiple
 
 - [HTTP Method]
 
-    ```
-    POST
-    ```
+```
+POST
+```
 - [Content-Type]
-    ```
-    application/json
-    ```
+```
+application/json
+```
 
 - [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
-- [Response body]
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
     },
-    "errors": []  
-  }
-  ```
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
+- [Response body]
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "errors": []  
+}
+```
 
 ### Validate Callback
 
@@ -107,50 +107,50 @@ Callback API that can validate if the data is appropriate before requesting impo
 
 - [HTTP Method]
 
-    ```
-    POST
-    ```
+```
+POST
+```
 - [Content-Type]
-    ```
-    application/json
-    ```
+```
+application/json
+```
 
 - [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
 - [Response body]
 
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
-    },
-    "success": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      }
-    ],
-    "errors": [
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]         
-  }
-  ```
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "success": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    }
+  ],
+  "errors": [
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]         
+}
+```

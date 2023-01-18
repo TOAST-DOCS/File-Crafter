@@ -2,6 +2,9 @@
 
 You can request File Crafter service’s features via API ([API Guide](./api-guide.md)). You can only retrieve the features and process some of them in the console.
 
+### 콘솔 아이콘 모음
+![](../image/icons.png)
+
 ### Export Request List
 
 - You can make a query by applying query conditions.
@@ -12,8 +15,8 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
         - WORKING: Processing
         - COMPLETED: Completed
         - FAILED: Failed
-- You can see the details of request by clicking the icon of details ![](../image/new_window.png).
-- When storage upload has failed, you can request reupload by clicking the reupload icon ![](../image/move.png).
+- 상세 항목의 아이콘(콘솔 아이콘 모음 1.)을 클릭하여 요청 상세를 확인할 수 있습니다.
+- 스토리지 업로드가 실패한 경우 재 업로드 아이콘(콘솔 아이콘 모음 2.)을 클릭하여 재 업로드를 요청할 수 있습니다.
 
 #### Details
 
@@ -21,7 +24,7 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
     - Number of processed exports: You can check the number of processed exports requested. Large files over 10 KB are marked separately.
     - Expiration date: When uploading to a specified storage fails, the exported file is kept for 7 days and then deleted. You must request reupload before expiration date. (When uploading succeeds, it is immediately deleted.)
     - Password: A password specified upon request. You can release the exported fil with the specified password.
-    - Storage information: The information on storage specified upon request. When you specify multiple storage, you can find the information through the navigation icon![](../image/nav_arrow_left.png) ![.
+    - 스토리지 정보: 요청 시 지정한 스토리지 정보 입니다. 다수 지정한 경우 네비게이션 아이콘(콘솔 아이콘 모음 3.)을 통해 확인할 수 있습니다.
     - Query parameter, extraction field, sheet: Additional information transmitted to the specified callback API URL upon request.
 
 ### Import Request List
@@ -36,10 +39,10 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
         - VALIDATED: Validity check completed
         - VALIDATING: Validating
         - READY: Waiting for process
-- Requests that contain validity check are displayed with a separate icon![](../image/green_check.png).
-- You can see the details of request by clicking the icon of details ![](../image/new_window.png).
-- For requests in a VALIDATED status (validity check completed), an icon ![](../image/download.png) is displayed to download a file of check results indicating success and failure.
-- For requests in a VALIDATED status (validity check completed), an icon to process Import ![](../image/play.png) is displayed.
+- 유효성 검사가 포함된 요청은 별도 아이콘(콘솔 아이콘 모음 4.)이 표시됩니다.
+- 상세 항목의 아이콘(콘솔 아이콘 모음 1.)을 클릭하여 요청 상세를 확인할 수 있습니다.
+- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 검사 결과 성공/실패 파일을 다운로드 할 수 있는 아이콘(콘솔 아이콘 모음 5.)이 나타납니다.
+- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 Import 처리 아이콘(콘솔 아이콘 모음 6.)이 나타납니다.
 
 #### Details
 
