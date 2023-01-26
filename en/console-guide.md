@@ -2,8 +2,17 @@
 
 You can request File Crafter service’s features via API ([API Guide](./api-guide.md)). You can only retrieve the features and process some of them in the console.
 
-### 콘솔 아이콘 모음
+### 콘솔 아이콘
+콘솔에서는 다양한 형태의 아이콘을 통해 정보와 기능을 제공합니다.
+
 ![](../image/icons.png)
+
+1. 상세 항목
+2. 재업로드
+3. 내비게이션
+4. 유효성 검사
+5. 다운로드
+6. Import 처리
 
 ### Export Request List
 
@@ -15,8 +24,8 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
         - WORKING: Processing
         - COMPLETED: Completed
         - FAILED: Failed
-- 상세 항목의 아이콘(콘솔 아이콘 모음 1.)을 클릭하여 요청 상세를 확인할 수 있습니다.
-- 스토리지 업로드가 실패한 경우 재 업로드 아이콘(콘솔 아이콘 모음 2.)을 클릭하여 재 업로드를 요청할 수 있습니다.
+- 상세 항목 아이콘을 클릭하여 요청 상세를 확인할 수 있습니다.
+- 스토리지 업로드에 실패할 경우 재업로드 아이콘을 클릭하여 업로드를 다시 요청할 수 있습니다.
 
 #### Details
 
@@ -24,7 +33,7 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
     - Number of processed exports: You can check the number of processed exports requested. Large files over 10 KB are marked separately.
     - Expiration date: When uploading to a specified storage fails, the exported file is kept for 7 days and then deleted. You must request reupload before expiration date. (When uploading succeeds, it is immediately deleted.)
     - Password: A password specified upon request. You can release the exported fil with the specified password.
-    - 스토리지 정보: 요청 시 지정한 스토리지 정보 입니다. 다수 지정한 경우 네비게이션 아이콘(콘솔 아이콘 모음 3.)을 통해 확인할 수 있습니다.
+    - 스토리지 정보: 요청 시 지정한 스토리지 정보입니다. 여러 개의 스토리지를 지정한 경우 내비게이션 아이콘을 클릭해 확인할 수 있습니다.
     - Query parameter, extraction field, sheet: Additional information transmitted to the specified callback API URL upon request.
 
 ### Import Request List
@@ -39,10 +48,10 @@ You can request File Crafter service’s features via API ([API Guide](./api-gui
         - VALIDATED: Validity check completed
         - VALIDATING: Validating
         - READY: Waiting for process
-- 유효성 검사가 포함된 요청은 별도 아이콘(콘솔 아이콘 모음 4.)이 표시됩니다.
-- 상세 항목의 아이콘(콘솔 아이콘 모음 1.)을 클릭하여 요청 상세를 확인할 수 있습니다.
-- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 검사 결과 성공/실패 파일을 다운로드 할 수 있는 아이콘(콘솔 아이콘 모음 5.)이 나타납니다.
-- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 Import 처리 아이콘(콘솔 아이콘 모음 6.)이 나타납니다.
+- 유효성 검사가 포함된 요청은 해당 아이콘이 표시됩니다.
+- 상세 항목 아이콘을 클릭하여 요청 상세를 확인할 수 있습니다.
+- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 검사 성공/실패 결과 파일을 내려받을 수 있는 다운로드 아이콘이 나타납니다.
+- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 Import 처리 아이콘이 나타납니다.
 
 #### Details
 

@@ -65,7 +65,6 @@ application/json
 Callback API that can receive and process an object array consisting of multiple items.
 
 - [HTTP Method]
-
 ```
 POST
 ```

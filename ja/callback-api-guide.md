@@ -21,11 +21,11 @@ application/json
 
 - [Query parameter]
 
-| 項目               | キー                | 備考                            |
-|--------------------|-------------------|---------------------------------|
-| 一度に照会するデータ数  | limit or pageSize | offset or pageNumとセット使用必須  |             
-| ページングのためにスキップするデータ数 | offset or pageNum |                                 |
-| シート区分パラメータ       | sheetQuery        | 複数シートexportの場合、シート区分のためのパラメータ |                              |
+  | 項目               | キー                | 備考                            |
+  |--------------------|-------------------|---------------------------------|
+  | 一度に照会するデータ数  | limit or pageSize | offset or pageNumとセット使用必須  |             
+  | ページングのためにスキップするデータ数 | offset or pageNum |                                 |
+  | シート区分パラメータ       | sheetQuery        | 複数シートexportの場合、シート区分のためのパラメータ |                              |
 
 - offset、limitパラメータセット
 ```json
@@ -65,7 +65,6 @@ application/json
 複数の項目で構成されたオブジェクト配列をリクエストとして受け取り処理できるコールバックAPIです。
 
 - [HTTP Method]
-
 ```
 POST
 ```
