@@ -77,7 +77,7 @@ Content-Type: appliction/json
 |---------------------------------|----------------|----------------|-------------------------------------------|-------------------------------------------|
 | callback                        | Object  | Not Null       | O   | export를 위한 콜백 정보                          | 
 | callback.url                    | String  | Not Blank      | O   | export를 위해 File Crafter가 호출해야 할 URL        |
-| callback.query                  | Object  |                |     | File Crafter가 지정된 URL을 호출하면서 함께 전달할 query |
+| callback.query                  | Object  |                |     | File Crafter가 지정된 URL을 호출하면서 함께 전달할 쿼리 |
 | exportedFile                    | Object  | Not Null       | O   | export 결과 파일 정보                           |
 | exportedFile.extension          | String  | Not Null       | O   | [xls, xlsx, csv, json]                    |
 | exportedFile.maxRowCountPerFile | Integer | 1000 ~ 1000000 |     | 파일별 최대 행 제한                               |
@@ -188,6 +188,6 @@ Export 요청, Import 요청이 공통적으로 사용하는 응답입니다.
 |----------------------|-----------|-------|
 | header               | Object  |           |
 | header.resultCode    | Integer | 요청 결과 코드  |
-| header.resultMessage | String  | 요청 결과 메세지 |
+| header.resultMessage | String  | 요청 결과 메시지 |
 | header.isSuccessful  | Boolean | 요청 처리 결과   |
 | fileId               | String  | 요청 ID     |
