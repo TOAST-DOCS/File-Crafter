@@ -98,19 +98,23 @@ Content-Type: appliction/json
       - export callbackレスポンスからキーを抽出して値でexportします。
 
   - ex) exportedFile.fields
+
 ```json
 {
     "name": "名前",
     "number": "連絡先"
 }
 ```
+
   - ex) export callback response
+
 ```json
 [
     {"name": "Jason", "number": "01012341234"}, 
     {"name":"Tim", "number": "01043214321"}
 ]
 ```
+
   - ex) export result
 
 | 名前 | 連絡先 |
@@ -120,7 +124,9 @@ Content-Type: appliction/json
 
 - exportedFile.sheets
     - export callbackをリクエストする時、sheetQueryパラメータを渡し、レスポンスをsheetNameシートにexportします。
+
 - ex) exportedFile.fields
+
 ```json
 [
     {
@@ -130,6 +136,7 @@ Content-Type: appliction/json
 ]
 ```
 - ex) export callback request
+
 ```
 http://my.service.com/api/export?sheetQuery=October
 ```

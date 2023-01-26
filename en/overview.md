@@ -19,6 +19,7 @@
 
 - Retrieve Processing Status
     - Allows you to retrieve the Import/Export processing status upon customer request.
+
 - Enables to process Excel files with a password
 
 ### Service Targets
