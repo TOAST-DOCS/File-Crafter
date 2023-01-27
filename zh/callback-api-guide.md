@@ -1,156 +1,155 @@
-## Application Service > File Crafter > 콜백 API 가이드
+## Application Service > File Crafter > Callback API Guide
 
-File Crafter의 import/export 기능을 이용하기 위해서는 적절한 콜백 API 제공이 필요합니다.
-각 콜백 API의 요구사항을 안내합니다.
+To use File Crafter’s import and export features, you must provide appropriate callback APIs.
+This document describes the requirements of each callback API.
 
-### Export 콜백
+### Export Callback
 
-페이징 처리된 목록 조회를 위한 콜백 API 입니다. 페이징을 위해 두가지 타입의 파라미터 셋을 이용할 수 있습니다.
-더 이상 조회 결과가 없을때까지 반복해서 호출하여 데이터를 export 합니다.
+Callback API for querying paginated lists. You can use two types of parameters for paging.
+Export data by calling repeatedly until there are no more query results.
 
 - [HTTP Method]
 
-    ```
-    GET
-    ```
+```
+GET
+```
 - [Content-Type]
 
-  ```
-  application/json
-  ```
+```
+application/json
+```
 
 - [Query parameter]
 
-  | 항목                 | 키                 | 비고                              |
+  | Item                 | Key                 | Description                              |
   |--------------------|-------------------|---------------------------------|
-  | 한번에 조회 할 데이터 갯수    | limit or pageSize | offset or pageNum 과 세트 사용 필수    |             
-  | 페이징을 위해 건너뛸 데이터 갯수 | offset or pageNum |                                 |
-  | 시트 구분 파라미터         | sheetQuery        | 다중 시트 export인 경우 시트 구분을 위한 파라미터 |                              |
+  | Number of data to query at once    | limit or pageSize | Required to use offset or pageNum and set    |             
+  | Number of data to skip for paging | offset or pageNum |                                 |
+  | Parameter for sheet classification         | sheetQuery        | Parameter to classify sheets when exporting multiple sheets |                              |
 
-- offset, limit 파라미터 셋
-    ```json
-    {
-      "offset": 0,
-      "limit": 10
-    }
-    ```
+- offset, limit parameter set
+```json
+{
+  "offset": 0,
+  "limit": 10
+}
+```
 
-- pageNum, pageSize 파라미터 셋
+- pageNum, pageSize parameter set
 
-    ```json
-    {
-      "pageNum": 1,
-      "pageSize": 10
-    }
-    ```
+```json
+{
+  "pageNum": 1,
+  "pageSize": 10
+}
+```
 
 - [Response body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
-### Import 콜백
+### Import Callback
 
-다수 항목으로 구성된 객체 배열을 요청으로 받아 처리할 수 있는 콜백 API 입니다.
+Callback API that can receive and process an object array consisting of multiple items.
+
+- [HTTP Method]
+```
+POST
+```
+- [Content-Type]
+```
+application/json
+```
+
+- [Request body]
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    },
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
+- [Response body]
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "errors": []  
+}
+```
+
+### Validate Callback
+
+Callback API that can validate if the data is appropriate before requesting import callback. The received request data must be returned as validation success/failure.
 
 - [HTTP Method]
 
-    ```
-    POST
-    ```
+```
+POST
+```
 - [Content-Type]
-    ```
-    application/json
-    ```
+```
+application/json
+```
 
 - [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
-- [Response body]
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
+```json
+{
+  "data": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
     },
-    "errors": []  
-  }
-  ```
-
-### Validate 콜백
-
-Import 콜백 요청 전 적절한 데이터인지 검증할 수 있는 콜백 API 입니다. 받은 요청 데이터를 검증 성공/실패로 구분하여 반환해야 합니다.
-
-- [HTTP Method]
-
-    ```
-    POST
-    ```
-- [Content-Type]
-    ```
-    application/json
-    ```
-
-- [Request body]
-  ```json
-  {
-    "data": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      },
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]
-  }
-  ```
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]
+}
+```
 
 - [Response body]
 
-  ```json
-  {
-    "header": {
-      "resultCode": 0,
-      "resultMessage": "success",
-      "isSuccessful": true
-    },
-    "success": [
-      {
-        "key1-1": "value1-1",
-        "key2-1": "value2-1"
-      }
-    ],
-    "errors": [
-      {
-        "key1-2": "value1-2",
-        "key2-2": "value2-2"
-      }
-    ]         
-  }
-  ```
+```json
+{
+  "header": {
+    "resultCode": 0,
+    "resultMessage": "success",
+    "isSuccessful": true
+  },
+  "success": [
+    {
+      "key1-1": "value1-1",
+      "key2-1": "value2-1"
+    }
+  ],
+  "errors": [
+    {
+      "key1-2": "value1-2",
+      "key2-2": "value2-2"
+    }
+  ]         
+}
+```

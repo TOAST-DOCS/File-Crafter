@@ -1,6 +1,6 @@
-## Application Service > File Crafter > 오류 코드
+## Application Service > File Crafter > Error Code
 
-### 오류 코드
+### Error Code
 
 | isSuccessful | resultCode | resultMessage          |
 |--------------|------------|------------------------|

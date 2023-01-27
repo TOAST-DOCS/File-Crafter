@@ -1,52 +1,64 @@
-## Application Service > File Crafter > 콘솔 사용 가이드
+## Application Service > File Crafter > Console User Guide
 
-File Crafter 서비스의 기능은 API([API 사용 가이드](./api-guide.md))를 통해 요청할 수 있습니다. 콘솔에서는 조회 및 일부 후 처리만 가능합니다.
+You can request File Crafter service’s features via API ([API Guide](./api-guide.md)). You can only retrieve the features and process some of them in the console.
 
-### Export 요청 목록
+### Console Icons
+Various forms of icons are used to provide information and features in the console.
 
-- 조회 조건을 적용 한 조회가 가능합니다.
-    - 검색 키: Export 요청 시 전달한 검색 키를 이용하여 조회할 수 있습니다.
-    - 처리 상태
-        - ALL: 전체
-        - READY: 처리 대기 중
-        - WORKING: 처리 중
-        - COMPLETED: 처리 완료
-        - FAILED: 실패
-- 상세 항목의 아이콘![](../image/new_window.png)을 클릭하여 요청 상세를 확인할 수 있습니다.
-- 스토리지 업로드가 실패한 경우 재 업로드 아이콘![](../image/move.png)을 클릭하여 재 업로드를 요청할 수 있습니다.
+![](../image/icons.png)
 
-#### 상세
+1. Details
+2. Reupload
+3. Navigation
+4. Validation
+5. Download
+6. Import Process
 
-- 요청 상세 내용을 스크롤을 통해 확인할 수 있습니다.
-    - 처리건수: 요청 한 Export 의 처리 건수를 확인할 수 있습니다. 10kb 이상의 대형 건은 별도 표기됩니다.
-    - 만료일시: Export 결과 파일은 지정 스토리지로 업로드 실패 시 7일간 보관 후 삭제합니다. 만료일시 전에 재 업로드 요청하여야 합니다. (업로드 성공 시 즉시 삭제 합니다.)
-    - 패스워드: 요청 시 지정한 패스워드입니다. Export 결과 파일은 지정한 패스워드로 해제할 수 있습니다.
-    - 스토리지 정보: 요청 시 지정한 스토리지 정보 입니다. 다수 지정한 경우 네비게이션 아이콘![](../image/nav_arrow_left.png) ![](../image/nav_arror_right.png)을 통해 확인할 수 있습니다.
-    - 질의 파라미터, 추출 필드, 시트: 요청 시 지정한 콜백 API URL로 전달되는 추가정보 입니다.
+### Export Request List
 
-### Import 요청 목록
+- You can make a query by applying query conditions.
+    - Search key: You can make a query by using the search key sent when requesting to export.
+    - Processing status
+        - ALL: All
+        - READY: Waiting for process
+        - WORKING: Processing
+        - COMPLETED: Completed
+        - FAILED: Failed
+- You can see the details of requests by clicking the Details icon.
+- If uploading to storage fails, you can request upload again by clicking the Reupload icon.
 
-- 조회 조건을 적용 한 조회가 가능합니다.
-    - 검색 키: Import 요청 시 전달한 검색 키를 이용하여 조회할 수 있습니다.
-    - 처리 상태
-        - ALL: 전체
-        - FAILED: 실패
-        - IMPORTED: 처리 완료
-        - IMPORTING: 처리 중
-        - VALIDATED: 유효성 검사 완료
-        - VALIDATING: 유효성 검사 중
-        - READY: 처리 대기 중
-- 유효성 검사가 포함된 요청은 별도 아이콘![](../image/green_check.png)이 표시됩니다.
-- 상세 항목의 아이콘![](../image/new_window.png)을 클릭하여 요청 상세를 확인할 수 있습니다.
-- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 검사 결과 성공/실패 파일을 다운로드 할 수 있는 아이콘![](../image/download.png)이 나타납니다.
-- VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 Import 처리 아이콘![](../image/play.png)이 나타납니다.
+#### Details
 
-#### 상세
+- Details of the request can be found through scrolls.
+    - Number of processed exports: You can check the number of processed exports requested. Large files over 10 KB are marked separately.
+    - Expiration date: When uploading to a specified storage fails, the exported file is kept for 7 days and then deleted. You must request reupload before expiration date. (When uploading succeeds, it is immediately deleted.)
+    - Password: A password specified upon request. You can release the exported fil with the specified password.
+    - Storage information: Information on the storage specified when requesting. When you specify multiple storages, you can check them with the navigation icon.
+    - Query parameter, extraction field, sheet: Additional information transmitted to the specified callback API URL upon request.
 
-- 요청 상세를 확인할 수 있습니다.
-    - 만료일시: 유효성 검사 결과 성공/실패, Import 대상 파일은 7일간 보관 후 삭제합니다.
-    - 패스워드: Import 대상 파일을 암호화하여 업로드한 경우 File Crafter가 패스워드를 이용해 처리합니다.
-    - 유효성 체크 콜백 URL: 유효성 검사를 위한 콜백 URL입니다.
-    - 데이터 시작 행: Import 대상 파일의 실제 데이터가 시작되는 행 번호입니다. 여러 행의 헤더를 가진 파일에서 사용됩니다.
-    - 자동 Import 처리: 유효성 검사 이후 VALIDATED 상태에 머무르지 않고 계속 Import 작업을 진행합니다.
-    - 처리 결과: 요청 한 Import 의 처리 결과를 확인할 수 있습니다. 10kb 이상의 대형 건은 별도 표기됩니다.
+### Import Request List
+
+- You can make a query by applying query conditions.
+    - Search key: You can make a query by using the search key sent when requesting to import.
+    - Processing status
+        - ALL: All
+        - FAILED: Failed
+        - IMPORTED: Completed
+        - IMPORTING: Processing
+        - VALIDATED: Validation completed
+        - VALIDATING: Validation in progress
+        - READY: Waiting for process
+- Requests including validation display the relevant icon.
+- You can check the request detail by clicking the Details icon.
+- For requests in the VALIDATED (Validation completed) status, the Download icon to download the success/failure result file is displayed.
+- For requests in the VALIDATED (Validation completed) status, the Import Process icon is displayed.
+
+#### Details
+
+- You can find the request details.
+    - Expiration date: Imported files and validation success and failure files are kept in 7 days and then deleted.
+    - Password: When the file to be imported is encrypted and uploaded, File Crafter processes it using a password.
+    - Validity check callback URL: A callback URL for validation.
+    - Data start row: The row number where the actual data of the imported file starts. It is used in files with multi-line headers.
+    - Auto Import process: After validation, the import operation continues without remaining in the VALIDATED status.
+    - Processing result: You can find the processing result of the requested Import. Large files over 10 KB are marked separately.
