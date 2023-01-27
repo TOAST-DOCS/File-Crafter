@@ -163,9 +163,9 @@ POST /file-crafter/v2.0/import/files
 
 | Value                     | Type     | Constraints   | Required  | Description                                    |
 |-----------------------|---------|---------|---------------------------------------|---------------------------------------|
-| importingCallbackUrl | Object |         | O   | URL to call by File Crafter for validity check   |
+| importingCallbackUrl | Object |         | O   | URL to call by File Crafter for validation   |
 | validatingCallbackUrl  | String |         |     | URL to call by File Crafter for export |
-| isAutoImporting       | String |         |    | When validity check is included                        |
+| isAutoImporting       | String |         |    | When validation is included                        |
 | dataStartRowNum       | String | At least 2 |     | Row number where actual data starts                     |
 | searchKey             | String |         |     | Search key used to retrieve requests in the console               |
 | password              | String |         |     | File password when importing an encrypted excel file |
