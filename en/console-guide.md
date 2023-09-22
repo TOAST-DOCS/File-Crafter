@@ -26,6 +26,7 @@ Various forms of icons are used to provide information and features in the conso
         - FAILED: Failed
 - You can see the details of requests by clicking the Details icon.
 - If uploading to storage fails, you can request upload again by clicking the Reupload icon.
+    - If uploading to storage fails, a notification email will be sent to project members.
 
 #### Details
 
