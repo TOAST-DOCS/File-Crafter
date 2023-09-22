@@ -1,10 +1,10 @@
 ## Application Service > File Crafter > Release Note
 
-### 2023. 09. 26.
+### September 26, 2023
 
-#### 기능 개선/변경
+#### Feature Updates
 
-- Export 요청 처리 결과 파일의 스토리지 업로드 실패에 대한 안내 메일이 발송됩니다.
+- You will receive an email about the failure to upload the file to storage as a result of processing the export request.
 
 ### January 31, 2023
 
