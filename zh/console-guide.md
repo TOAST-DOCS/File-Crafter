@@ -26,7 +26,8 @@ Various forms of icons are used to provide information and features in the conso
         - FAILED: Failed
 - You can see the details of requests by clicking the Details icon.
 - If uploading to storage fails, you can request upload again by clicking the Reupload icon.
-  - 스토리지 업로드에 실패하는 경우 프로젝트 멤버 대상으로 안내 메일이 전송됩니다.
+    - If uploading to storage fails, a notification email will be sent to project members.
+
 #### Details
 
 - Details of the request can be found through scrolls.
