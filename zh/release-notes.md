@@ -1,10 +1,10 @@
 ## Application Service > File Crafter > Release Note
 
-### 2024. 03. 26.
+### March 26, 2024
 
 #### Feature Updates
 
-- 요청 처리 실패 시 프로젝트 ADMIN을 기본 대상으로 알림이 발송됩니다.
+- Updated to send a notification to the project ADMIN as the default destination when requests fail to process.
 
 ### September 26, 2023
 
