@@ -1,5 +1,17 @@
 ## Application Service > File Crafter > Release Note
 
+### March 26, 2024
+
+#### Feature Updates
+
+- Updated to send a notification to the project ADMIN by default when a request fails to process. 
+
+### September 26, 2023
+
+#### Feature Updates
+
+- Updated to send an email that files failed to be uploaded to storage when export request fails to process.
+
 ### January 31, 2023
 
 #### Release of a New Service
