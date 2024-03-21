@@ -1,5 +1,11 @@
 ## Application Service > File Crafter > Release Note
 
+### March 26, 2024
+
+#### Feature Updates
+
+- Updated to send a notification to the project ADMIN as the default destination when requests fail to process.
+
 ### September 26, 2023
 
 #### Feature Updates
