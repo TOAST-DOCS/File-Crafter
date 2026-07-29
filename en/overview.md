@@ -1,14 +1,19 @@
-## Application Service > File Crafter > Overview
+<!-- pre-align:aligned sig=6ba623e94aac -->
+
+<a id="application-service-file-crafter-overview"></a>
+## Application Service > File Crafter > Overview { #application-service-file-crafter-overview }
 
 - File Crafter is a service that sends repetitive requests using files to specific API URLs or to receive API response results collected as a file. The service supports difficult and time consuming processing such as memory management and asynchronous flow management required for large-capacity processing.
 
-### Characteristics
+<a id="characteristics"></a>
+### Characteristics { #characteristics }
 
 - You can send repetitive requests using files to specific API URLs or to receive API response results collected as a file.
 - Provides and receives data in the desired file format.
 - Files after export processing are uploaded to the storage specified by customers.
 
-### Main Features
+<a id="main-features"></a>
+### Main Features { #main-features }
 
 - File Import
     - Repeatedly sends data provided as a file in the desired format to the customer API for processing.
@@ -22,7 +27,8 @@
 
 - Enables to process Excel files with a password
 
-### Service Targets
+<a id="service-targets"></a>
+### Service Targets { #service-targets }
 
 - When you need to extract the results of repetitive API calls to a file
 - When you need to process large input data repeatedly

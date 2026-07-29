@@ -1,14 +1,19 @@
-## Application Service > File Crafter > 概要
+<!-- pre-align:aligned sig=6ba623e94aac -->
+
+<a id="application-service-file-crafter-overview"></a>
+## Application Service > File Crafter > 概要 { #application-service-file-crafter-overview }
 
 - File CrafterはFileを利用して特定API URLに繰り返しリクエストを送ったり、APIレスポンス結果を収集してFileでダウンロードしたりできるサービスです。大容量処理に必要なメモリ管理、非同期 フロー管理など、難しくて煩雑な処理をサポートします。
 
-### 特徴
+<a id="characteristics"></a>
+### 特徴 { #characteristics }
 
 - Fileを利用して特定API URLに繰り返しリクエストを送ったり、APIレスポンス結果を収集してFileでダウンロードしたりできます。
 - 好きな形式のFileでデータを提供し、受け取ることができます。
 - Export処理結果ファイルは顧客が指定したStorageにアップロードされます。
 
-### 主要機能
+<a id="main-features"></a>
+### 主要機能 { #main-features }
 
 - File Import
     - 好きな形式のFileで提供されたデータを顧客APIに繰り返し送って処理します。
@@ -22,7 +27,8 @@
 
 - パスワードが適用されたExcelファイルを処理可能
 
-### サービス対象
+<a id="service-targets"></a>
+### サービス対象 { #service-targets }
 
 - 繰り返しAPI呼び出し、その結果をファイルで抽出する必要がある場合
 - 大量の入力データを繰り返し処理する必要がある場合

@@ -1,21 +1,29 @@
-## Application Service > File Crafter > API 사용 가이드
+<!-- pre-align:aligned sig=e89df1d60807 -->
 
-### API 소개
+<a id="application-service-file-crafter-api-guide"></a>
+## Application Service > File Crafter > API 사용 가이드 { #application-service-file-crafter-api-guide }
 
+<a id="api-overview"></a>
+### API 소개 { #api-overview }
+
+<a id="api-overview-api-domain"></a>
 #### API 도메인
 
 ```
 https://api-file-crafter.nhncloudservice.com
 ```
 
+<a id="api-overview-appkey-secret"></a>
 #### AppKey & Secret
 
 - 헤더에 AppKey와 Secret 키를 추가해야 합니다.
 - **CONSOLE > Application Service > File Crafter > URL & AppKey**에서 확인하거나 생성할 수 있습니다.
 
-### Export 요청
+<a id="export-request"></a>
+### Export 요청 { #export-request }
 지정된 URL로 반복 요청을 보낸 뒤 받은 응답을 파일로 저장하여 지정된 스토리지로 업로드합니다. Export 콜백 URL에서 요구되는 스펙은 [콜백 API 가이드](./callback-api-guide.md)에서 확인하실 수 있습니다.
 
+<a id="export-request-request"></a>
 #### 요청
 
 - [URL]
@@ -141,9 +149,11 @@ Content-Type: appliction/json
 http://my.service.com/api/export?sheetQuery=October
 ```
 
-### Import 요청
+<a id="import-request"></a>
+### Import 요청 { #import-request }
 업로드된 파일을 파라미터화 하여 지정된 URL로 반복 요청 합니다. import 콜백 URL에서 요구되는 스펙은 [콜백 API 가이드](./callback-api-guide.md)에서 확인하실 수 있습니다.
 
+<a id="import-request-request"></a>
 #### 요청
 
 - [URL]
@@ -170,7 +180,8 @@ POST /file-crafter/v2.0/import/files
 | searchKey             | String |         |     | 콘솔에서 요청을 조회하는 데 사용할 검색 키               |
 | password              | String |         |     | 암호화된 excel 파일을 import 하는 경우 해당 파일의 암호 |
 
-### 공통 응답
+<a id="common-response"></a>
+### 공통 응답 { #common-response }
 Export 요청, Import 요청이 공통적으로 사용하는 응답입니다.
 
 - [Response body]
