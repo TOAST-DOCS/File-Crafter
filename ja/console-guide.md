@@ -1,8 +1,12 @@
-## Application Service > File Crafter > コンソール使用ガイド
+<!-- pre-align:aligned sig=d350452d6392 -->
+
+<a id="application-service-file-crafter-console-user-guide"></a>
+## Application Service > File Crafter > コンソール使用ガイド { #application-service-file-crafter-console-user-guide }
 
 File Crafterサービスの機能はAPI([API使用ガイド](./api-guide.md))を介してリクエストできます。コンソールからは照会および一部の後処理のみ可能です。
 
-### コンソールアイコン
+<a id="console-icons"></a>
+### コンソールアイコン { #console-icons }
 コンソールではさまざまな形態のアイコンを通じて情報と機能を提供します。
 
 ![](../image/icons.png)
@@ -14,7 +18,8 @@ File Crafterサービスの機能はAPI([API使用ガイド](./api-guide.md))を
 5. ダウンロード
 6. Import処理
 
-### Exportリクエストリスト
+<a id="export-request-list"></a>
+### Exportリクエストリスト { #export-request-list }
 
 - 照会条件を適用した照会が可能です。
     - 検索キー：Exportリクエスト時に渡した検索キーを利用して照会できます。
@@ -28,6 +33,7 @@ File Crafterサービスの機能はAPI([API使用ガイド](./api-guide.md))を
 - ストレージアップロードに失敗する場合、再アップロードアイコンをクリックしてアップロードを再リクエストできます。
     - ストレージのアップロードに失敗した場合、プロジェクトメンバーに案内メールが送信されます。
 
+<a id="export-request-list-details"></a>
 #### 詳細
 
 - リクエスト詳細内容をスクロールして確認できます。
@@ -37,7 +43,8 @@ File Crafterサービスの機能はAPI([API使用ガイド](./api-guide.md))を
     - ストレージ情報：リクエスト時に指定したストレージ情報です。複数のストレージを指定した場合、ナビゲーションアイコンをクリックして確認できます。
     - クエリパラメータ、抽出フィールド、シート：リクエスト時に指定したコールバックAPI URLに渡される追加情報です。
 
-### Importリクエストリスト
+<a id="import-request-list"></a>
+### Importリクエストリスト { #import-request-list }
 
 - 照会条件を適用した照会が可能です。
     - 検索キー：Importリクエスト時に渡した検索キーを利用して照会できます。
@@ -54,6 +61,7 @@ File Crafterサービスの機能はAPI([API使用ガイド](./api-guide.md))を
 - VALIDATED(有効性検査完了)状態のリクエスト件に限り検査成功/失敗結果ファイルをダウンロードできるダウンロードアイコンが表示されます。
 - VALIDATED(有効性検査完了)状態のリクエスト件に限りImport処理アイコンが表示されます。
 
+<a id="import-request-list-details"></a>
 #### 詳細
 
 - リクエスト詳細を確認できます。

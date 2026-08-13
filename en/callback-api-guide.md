@@ -1,9 +1,13 @@
-## Application Service > File Crafter > Callback API Guide
+<!-- pre-align:aligned sig=5e07c573064c -->
+
+<a id="application-service-file-crafter-callback-api-guide"></a>
+## Application Service > File Crafter > Callback API Guide { #application-service-file-crafter-callback-api-guide }
 
 To use File Crafter’s import and export features, you must provide appropriate callback APIs.
 This document describes the requirements of each callback API.
 
-### Export Callback
+<a id="export-callback"></a>
+### Export Callback { #export-callback }
 
 Callback API for querying paginated lists. You can use two types of parameters for paging.
 Export data by calling repeatedly until there are no more query results.
@@ -60,7 +64,8 @@ application/json
 }
 ```
 
-### Import Callback
+<a id="import-callback"></a>
+### Import Callback { #import-callback }
 
 Callback API that can receive and process an object array consisting of multiple items.
 
@@ -100,7 +105,8 @@ application/json
 }
 ```
 
-### Validate Callback
+<a id="validate-callback"></a>
+### Validate Callback { #validate-callback }
 
 Callback API that can validate if the data is appropriate before requesting import callback. The received request data must be returned as validation success/failure.
 

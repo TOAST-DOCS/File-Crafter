@@ -1,21 +1,29 @@
-## Application Service > File Crafter > API使用ガイド
+<!-- pre-align:aligned sig=e89df1d60807 -->
 
-### API紹介
+<a id="application-service-file-crafter-api-guide"></a>
+## Application Service > File Crafter > API使用ガイド { #application-service-file-crafter-api-guide }
 
+<a id="api-overview"></a>
+### API紹介 { #api-overview }
+
+<a id="api-overview-api-domain"></a>
 #### APIドメイン
 
 ```
 https://api-file-crafter.nhncloudservice.com
 ```
 
+<a id="api-overview-appkey-secret"></a>
 #### AppKey & Secret
 
 - ヘッダにAppKeyとSecretキーを追加する必要があります。
 - **CONSOLE > Application Service > File Crafter > URL & AppKey**で確認または作成できます。
 
-### Exportリクエスト
+<a id="export-request"></a>
+### Exportリクエスト { #export-request }
 指定されたURLに繰り返しリクエストを送った後、受け取ったレスポンスをファイルとして保存して指定されたストレージにアップロードします。ExportコールバックURLで要求されるスペックは[コールバックAPIガイド](./callback-api-guide.md)で確認できます。
 
+<a id="export-request-request"></a>
 #### リクエスト
 
 - [URL]
@@ -141,9 +149,11 @@ Content-Type: appliction/json
 http://my.service.com/api/export?sheetQuery=October
 ```
 
-### Importリクエスト
+<a id="import-request"></a>
+### Importリクエスト { #import-request }
 アップロードされたファイルをパラメータ化して指定されたURLに繰り返しリクエストします。 importコールバックURLで要求されるスペックは[コールバックAPIガイド](./callback-api-guide.md)で確認できます。
 
+<a id="import-request-request"></a>
 #### リクエスト
 
 - [URL]
@@ -170,7 +180,8 @@ POST /file-crafter/v2.0/import/files
 | searchKey             | String |         |     | コンソールでリクエストを照会するのに使用する検索キー              |
 | password              | String |         |     | 暗号化されたexcelファイルをimportする場合、そのファイルのパスワード |
 
-### 共通レスポンス
+<a id="common-response"></a>
+### 共通レスポンス { #common-response }
 Exportリクエスト、 Importリクエストが共通に使用するレスポンスです。
 
 - [Response body]

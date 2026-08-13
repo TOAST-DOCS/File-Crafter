@@ -1,8 +1,12 @@
-## Application Service > File Crafter > 콘솔 사용 가이드
+<!-- pre-align:aligned sig=d350452d6392 -->
+
+<a id="application-service-file-crafter-console-user-guide"></a>
+## Application Service > File Crafter > 콘솔 사용 가이드 { #application-service-file-crafter-console-user-guide }
 
 File Crafter 서비스의 기능은 [API 사용 가이드](./api-guide.md)를 이용해 요청할 수 있습니다. 콘솔에서는 조회 및 일부 후처리만 가능합니다.
 
-### 콘솔 아이콘
+<a id="console-icons"></a>
+### 콘솔 아이콘 { #console-icons }
 콘솔에서는 다양한 형태의 아이콘을 통해 정보와 기능을 제공합니다.
 
 ![](../image/icons.png)
@@ -14,7 +18,8 @@ File Crafter 서비스의 기능은 [API 사용 가이드](./api-guide.md)를 �
 5. 다운로드
 6. Import 처리
 
-### Export 요청 목록
+<a id="export-request-list"></a>
+### Export 요청 목록 { #export-request-list }
 
 - 조건을 적용하여 조회할 수 있습니다.
     - 검색 키: Export 요청 시 전달한 검색 키를 이용하여 조회할 수 있습니다.
@@ -28,6 +33,7 @@ File Crafter 서비스의 기능은 [API 사용 가이드](./api-guide.md)를 �
 - 스토리지 업로드에 실패할 경우 재업로드 아이콘을 클릭하여 업로드를 다시 요청할 수 있습니다.
     - 스토리지 업로드에 실패하는 경우 프로젝트 멤버 대상으로 안내 메일이 전송됩니다.
 
+<a id="export-request-list-details"></a>
 #### 상세
 
 - 요청 상세 내용을 스크롤을 통해 확인할 수 있습니다.
@@ -37,7 +43,8 @@ File Crafter 서비스의 기능은 [API 사용 가이드](./api-guide.md)를 �
     - 스토리지 정보: 요청 시 지정한 스토리지 정보입니다. 여러 개의 스토리지를 지정한 경우 내비게이션 아이콘을 클릭해 확인할 수 있습니다.
     - 질의 파라미터, 추출 필드, 시트: 요청 시 지정한 콜백 API URL로 전달되는 추가정보 입니다.
 
-### Import 요청 목록
+<a id="import-request-list"></a>
+### Import 요청 목록 { #import-request-list }
 
 - 조회 조건을 적용 한 조회가 가능합니다.
     - 검색 키: Import 요청 시 전달한 검색 키를 이용하여 조회할 수 있습니다.
@@ -54,6 +61,7 @@ File Crafter 서비스의 기능은 [API 사용 가이드](./api-guide.md)를 �
 - VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 검사 성공/실패 결과 파일을 내려받을 수 있는 다운로드 아이콘이 나타납니다.
 - VALIDATED(유효성 검사 완료) 상태인 요청 건에 한해 Import 처리 아이콘이 나타납니다.
 
+<a id="import-request-list-details"></a>
 #### 상세
 
 - 요청 상세를 확인할 수 있습니다.

@@ -1,8 +1,12 @@
-## Application Service > File Crafter > Console User Guide
+<!-- pre-align:aligned sig=d350452d6392 -->
+
+<a id="application-service-file-crafter-console-user-guide"></a>
+## Application Service > File Crafter > Console User Guide { #application-service-file-crafter-console-user-guide }
 
 You can request File Crafter service’s features via API ([API Guide](./api-guide.md)). You can only retrieve the features and process some of them in the console.
 
-### Console Icons
+<a id="console-icons"></a>
+### Console Icons { #console-icons }
 Various forms of icons are used to provide information and features in the console.
 
 ![](../image/icons.png)
@@ -14,7 +18,8 @@ Various forms of icons are used to provide information and features in the conso
 5. Download
 6. Import Process
 
-### Export Request List
+<a id="export-request-list"></a>
+### Export Request List { #export-request-list }
 
 - You can make a query by applying query conditions.
     - Search key: You can make a query by using the search key sent when requesting to export.
@@ -28,6 +33,7 @@ Various forms of icons are used to provide information and features in the conso
 - If uploading to storage fails, you can request upload again by clicking the Reupload icon.
     - If uploading to storage fails, a notification email will be sent to project members.
 
+<a id="export-request-list-details"></a>
 #### Details
 
 - Details of the request can be found through scrolls.
@@ -37,7 +43,8 @@ Various forms of icons are used to provide information and features in the conso
     - Storage information: Information on the storage specified when requesting. When you specify multiple storages, you can check them with the navigation icon.
     - Query parameter, extraction field, sheet: Additional information transmitted to the specified callback API URL upon request.
 
-### Import Request List
+<a id="import-request-list"></a>
+### Import Request List { #import-request-list }
 
 - You can make a query by applying query conditions.
     - Search key: You can make a query by using the search key sent when requesting to import.
@@ -54,6 +61,7 @@ Various forms of icons are used to provide information and features in the conso
 - For requests in the VALIDATED (Validation completed) status, the Download icon to download the success/failure result file is displayed.
 - For requests in the VALIDATED (Validation completed) status, the Import Process icon is displayed.
 
+<a id="import-request-list-details"></a>
 #### Details
 
 - You can find the request details.

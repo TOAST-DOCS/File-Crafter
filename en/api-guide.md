@@ -1,21 +1,29 @@
-## Application Service > File Crafter > API Guide
+<!-- pre-align:aligned sig=e89df1d60807 -->
 
-### API Overview
+<a id="application-service-file-crafter-api-guide"></a>
+## Application Service > File Crafter > API Guide { #application-service-file-crafter-api-guide }
 
+<a id="api-overview"></a>
+### API Overview { #api-overview }
+
+<a id="api-overview-api-domain"></a>
 #### API Domain
 
 ```
 https://api-file-crafter.nhncloudservice.com
 ```
 
+<a id="api-overview-appkey-secret"></a>
 #### AppKey & Secret
 
 - You must add AppKey and Secret Key to headers.
 - You can check or create them in **CONSOLE > Application Service > File Crafter > URL & AppKey**.
 
-### Export Request
+<a id="export-request"></a>
+### Export Request { #export-request }
 After sending repetitive requests to the specified URL, the received response is saved as a file and uploaded to the specified storage. The specifications required by the Export callback URL can be found in the [Callback API Guide](./callback-api-guide.md).
 
+<a id="export-request-request"></a>
 #### Request
 
 - [URL]
@@ -141,9 +149,11 @@ Content-Type: appliction/json
 http://my.service.com/api/export?sheetQuery=October
 ```
 
-### Import Request
+<a id="import-request"></a>
+### Import Request { #import-request }
 Parameterize the uploaded file and make repetitive requests to the specified URL. The specifications required by the import callback URL can be found in the [Callback API Guide](./callback-api-guide.md).
 
+<a id="import-request-request"></a>
 #### Request
 
 - [URL]
@@ -170,7 +180,8 @@ POST /file-crafter/v2.0/import/files
 | searchKey             | String |         |     | Search key used to retrieve requests in the console               |
 | password              | String |         |     | File password when importing an encrypted excel file |
 
-### Common response
+<a id="common-response"></a>
+### Common response { #common-response }
 Response commonly used by Export and Import requests.
 
 - [Response body]
