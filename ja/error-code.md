@@ -1,10 +1,10 @@
 <!-- pre-align:aligned sig=dbfd53f4141b -->
 
 <a id="application-service-file-crafter-error-code"></a>
-## Application Service > File Crafter > 오류 코드 { #application-service-file-crafter-error-code }
+## Application Service > File Crafter > エラーコード { #application-service-file-crafter-error-code }
 
 <a id="error-code"></a>
-### 오류 코드 { #error-code }
+### エラーコード { #error-code }
 
 | isSuccessful | resultCode | resultMessage          |
 |--------------|------------|------------------------|
