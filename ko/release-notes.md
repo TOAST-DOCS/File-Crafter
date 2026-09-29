@@ -1,29 +1,8 @@
-<!-- pre-align:aligned sig=9eb19bf60fb3 -->
+<!-- pre-align:aligned sig=efd1b26cb08e -->
 
 <a id="application-service-file-crafter-release-note"></a>
 ## Application Service > File Crafter > 릴리스 노트 { #application-service-file-crafter-release-note }
 
-<a id="march-26-2024"></a>
-### 2024. 03. 26. { #march-26-2024 }
+{% include-markdown './release-notes/2024.md' %}
 
-<a id="march-26-2024-feature-updates"></a>
-#### 기능 개선/변경
-
-- 요청 처리 실패 시 프로젝트 ADMIN을 기본 대상으로 알림이 발송됩니다.
-
-<a id="september-26-2023"></a>
-### 2023. 09. 26. { #september-26-2023 }
-
-<a id="september-26-2023-feature-updates"></a>
-#### 기능 개선/변경
-
-- Export 요청 처리 결과 파일의 스토리지 업로드 실패에 대한 안내 메일이 발송됩니다.
-
-<a id="january-31-2023"></a>
-### 2023. 01. 31. { #january-31-2023 }
-
-<a id="january-31-2023-release-of-a-new-service"></a>
-#### 신규 서비스 출시
-
-- File Crafter는 File을 이용하여 특정 API URL에 반복적인 요청을 보내거나, API 응답 결과를 수집하여 File로 내려받을 수 있는 서비스입니다. 대용량 처리에 필요한 메모리 관리, 비 동기
-  흐름 관리 등 어렵고 번거로운 처리를 지원합니다.
+{% include-markdown './release-notes/2023.md' %}
