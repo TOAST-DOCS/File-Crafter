@@ -108,19 +108,19 @@ Content-Type: appliction/json
    - ex) exportedFile.fields
 
 ```json
- {
-     "name": "이름",
-     "number": "연락처"
- }
- ```
+{
+    "name": "이름",
+    "number": "연락처"
+}
+```
 
- - ex) export callback response
+  - ex) export callback response
 
 ```json
- [
-   {"name": "Jason", "number": "01012341234"}, 
-   {"name":"Tim", "number": "01043214321"}
- ]
+[
+    {"name": "Jason", "number": "01012341234"}, 
+    {"name":"Tim", "number": "01043214321"}
+]
 ```
 
   - ex) export result
